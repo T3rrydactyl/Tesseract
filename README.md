@@ -3,7 +3,7 @@
 ## Description
 This project was developed as part of the **Entrepreneurship and Innovation Project (2023-2024)[SEM2]** course at the **University of Edinburgh**. Our team was tasked with creating a 'holographic device' that supports the **Human Development Index (HDI)**. We developed **TouchTalk**, a mid-tech Augmentative and Alternative Communication (AAC) device designed to improve communication for non-verbal individuals through gesture-driven holographic interactions.
 
-A live preview of the website can be found [here](https://t3rrydactyl.github.io/Tesseract/touchtalk.html).
+A live preview of the website can be found [here](https://t3rrydactyl.github.io/Tesseract/index.html).
 
 ## Features
 - **Gesture-Driven Holographic Interactions**  
@@ -23,8 +23,9 @@ A live preview of the website can be found [here](https://t3rrydactyl.github.io/
 - **Affordable & Accessible**  
   TouchTalk is engineered as a cost-effective solution for Special Educational Needs and Disabilities (SEND) funding, making it accessible for schools, families, and institutions.
 
-## Usage
-Visit the live preview of the website [here](https://t3rrydactyl.github.io/Tesseract/touchtalk.html) to explore TouchTalk, view product details, and learn more about the team behind the project.
+[![Watch the video](https://img.youtube.com/vi/566SZe5wfAY/maxresdefault.jpg)](https://youtu.be/566SZe5wfAY?si=pmyY7w5EJNzmopqZ)
+
+Click the image to watch the trailer for TouchTalk.
 
 ## Team
 - **Krithikha Sivaraj**  
