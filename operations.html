@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Tesseract | Operations Management</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <style>.row {
+      margin-bottom: 80px;
+    }
+    img {
+      border-radius: 20px;
+    }
+    #aimsModal {
+      /* Other styles for your modal */
+      z-index: 1000; /* Example value; should be higher than the z-index of other elements it should cover */
+    }
+
+
+  /* Responsive design for smaller screens */
+  @media screen and (max-width: 768px) {
+    table, th, td {
+      display: block;
+    }
+
+    th, td {
+      text-align: right; /* Align text to the right on small screens */
+      padding-left: 70%; /* Push content from the left */
+      position: relative;
+    }
+
+    td::before {
+      content: attr(data-label); /* Use data-label attribute for content before the cell */
+      position: absolute;
+      left: 0;
+      width: 60%;
+      padding-left: 15px;
+      font-weight: bold;
+      text-align: left; /* Align this pseudo-element to the left */
+    }
+  }
+      </style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="touchtalk.html">TouchTalk</a></li>
+                        <li><a href="meet-the-team.html">Meet The Team</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+  <div class="video-background">
+    <video playsinline autoplay muted loop>
+      <source src="assets/images/soldering.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="page-heading">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h6>Tesseract's Business Plan</h6>
+          <h2>Operations Management</h2>
+          <div class="line-dec"></div>
+        </div>
+      </div>
+    </div>
+    <div class="featured-explore">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="owl-features owl-carousel">
+              <div class="item">
+                <div class="thumb">
+                  <img src="assets/images/road.jpg" alt="" style="border-radius: 20px;">
+                  <div class="hover-effect">
+                    <div class="content">
+                      <div class="caption">
+                      <h4>Road in Edinburgh</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="thumb">
+                  <img src="assets/images/parts-on-table.jpg" alt="" style="border-radius: 20px;">
+                  <div class="hover-effect">
+                    <div class="content">
+                      <div class="caption">
+                      <h4>TouchTalk Internal Layout Physical Draft</h4></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="thumb">
+                  <img src="assets/images/operations-exploded.jpeg" alt="" style="border-radius: 20px;">
+                  <div class="hover-effect">
+                    <div class="content">
+                      <div class="caption">
+                      <h4>TouchTalk Exploded View</h4>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="thumb">
+                  <img src="assets/images/boxes.jpg" alt="" style="border-radius: 20px;">
+                  <div class="hover-effect">
+                    <div class="content">
+                      <div class="caption">
+                      <h4>Packaging</h4>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="discover-items">
+    <div class="container">
+      <div class="row">
+        
+          <div class="section-heading-left" style="text-align: left">
+            <h2>Unveiling the Art of <em>Production</em>.</h2>
+            <div class="line-dec"></div>
+          </div>
+        
+          <!-- Column 1 -->
+<div class="col-lg-4">
+  <p style="font-size: 16px">
+    Touch Talk devices are assembled in-house, incorporating quality components such as the Raspberry Pi 3B+ and an Ansmann 1700-0148 rechargeable lithium battery. The production process includes CAD modelling of the main components, which are then 3D printed—namely the lid and base, which ingeniously incorporates a unified battery and pi holder design. Final assembly involves securing the components into the enclosure and screwing on the lid with screws.<br><br>
+    In addition to the TouchTalk device, we will 3D print an accompanying rubber slip-on case with modular side panels. Available for separate purchase, these panels can be easily interchanged, offering a variety of textures to
+  </p>
+</div>
+
+<!-- Column 2 -->
+<div class="col-lg-4">
+  <p style="font-size: 16px">
+    enhance tactile stimulation and provide a customisable sensory experience.<br><br>In the early stages of Touch Talk's operation, due to limited upfront finance, production will be labour-intensive. Assembly of the devices will therefore be carried out by hand, which allows for detailed quality assurance but requires lower initial capital expenditure compared to automated production methods.<br><br>
+    As each component is manually assembled into the 3D printed housing, it will be inspected to ensure that it meets our satisfactory standard in certain areas including but not limited to accuracy of the fit, stability of the 
+  </p>
+</div>
+
+<!-- Column 3 -->
+<div class="col-lg-4">
+  <p style="font-size: 16px">
+    assembly, integrity of electrical connections, responsiveness of interactive elements, and overall aesthetic quality. This process reduces our landfill tax expenditure and ensures each device is up to the high-quality standard expected by our customers.<br><br>As we scale, we will transition to more capital-intensive production methods. This will coincide with the implementation of more automated quality checks at various stages of production. To manage production costs and maintain quality during this transition, we will invest in training for our workforce to handle sophisticated machinery and oversee automated quality assurance processes.
+  </p>
+</div>
+
+        
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="left-image">
+            <img src="assets/images/lorry.jpg";">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <div class="section-heading-left">
+            <h2>Navigating Customer <em>Deliveries</em>.</h2>
+            <div class="line-dec"></div>
+          </div>
+
+          <p style="font-size: 16px;">TouchTalk's post-production process is designed to ensure customer satisfaction and environmental responsibility:</p><br>
+          <ul>
+            <li>Rigorous quality control</li>
+            <li>Eco-friendly packaging</li>
+            <li>Standard and express delivery options</li>
+            <li>Immediate tracking upon dispatch</li>
+            <li>Centralised inventory in Edinburgh</li>
+          </ul>          
+          <br>
+          <div class="border-button">
+            <a href="#" id="aimsBtn">Read More About Deliveries</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        
+      
+        <!-- Column 1 -->
+        <div class="col-lg-6">
+          <div class="section-heading-left" style="text-align: left">
+            <h2>Payment Pathways and <em>Transaction</em> Terms.</h2>
+            <div class="line-dec"></div>
+          </div>
+          <p style="font-size: 16px">
+            With the initial focus on direct sales and not retail distribution, we will utilise modern payment solutions such as Tap to Pay on iPhone, which will serve as an alternative to traditional point of sale machines for in-person sales at fairs and events. This approach not only reduces the need for additional hardware but also provides a convenient and secure payment method for our customers. Online transactions will remain secure and user-friendly, offering various digital payment options to suit all customer preferences.<br><br> For institutional customers such as schools and centres, we shall offer the option of purchase orders and net-30 payment terms, pending a credit check.
+          </p><br><br>
+        </div>
+      
+        <!-- Column 2 -->
+        <div class="col-lg-6">
+          
+            <img src="assets/images/tap-to-pay.jpg"
+          
+        </div>
+      
+      
+    </div>
+    </div>
+  </div>
+
+  <div style="background-image: url(assets/images/ship-backdrop.jpg)" class="section">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="section-heading">
+            <h2>Our <em>Supply Chain</em></h2>
+            <div class="line-dec"></div><br>
+
+            <p>Our supply chain is composed of hand-picked suppliers known for their reliability and the portability of their components. We maintain a stock of critical components to prevent production delays and ensure the ability to meet customer demand promptly. We work closely with our suppliers to secure bulk pricing and establish contingency plans to mitigate any potential supply chain disruptions.
+
+              A comprehensive supplier list can be found in the following table
+              </p>
+          </div>
+        </div>
+        <div class="col-lg-8 align-self-center">
+          <table>
+            <tr>
+              <th>Supplier</th>
+              <th>Component</th>
+            </tr>
+            <tr>
+              <td>Shenzhen Blue Edge Technology CO., Ltd</td>
+              <td>Projection Module</td>
+            </tr>
+            <tr>
+              <td>Cool Components Ltd</td>
+              <td>Raspberry Pi 3 Model B+</td>
+            </tr>
+            <tr>
+              <td>Switch Electronics Limited</td>
+              <td>Dual-Axis Joystick Module</td>
+            </tr>
+            <tr>
+              <td>Cool Components Ltd</td>
+              <td>Grove Inertial Measurement Unit Sensor</td>
+            </tr>
+            <tr>
+              <td>The Pi Hut Ltd</td>
+              <td>Grove Base HAT for Raspberry Pi</td>
+            </tr>
+            <tr>
+              <td>The Pi Hut Ltd</td>
+              <td>ANSMANN PB212 10,000mAh Power Bank</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h2>Our <em>Equipment</em></h2>
+            <div class="line-dec"></div><br>
+
+            
+            <p>The production facility is equipped with the latest 3D printing technology, which allows for rapid prototyping and production scaling. We also utilise precision assembly tools and electrical testing equipment to ensure each device functions correctly. Regular maintenance schedules are adhered to for all equipment, and staff are trained in the latest manufacturing techniques to ensure the highest level of productivity and product quality.</p><br>
+              <p>In alignment with our commitment to maintaining a safe and healthy work environment, we adhere strictly to the Health and Safety at Work Act. To ensure compliance with health and safety regulations, all equipment is regularly inspected and maintained to prevent any potential hazards. Our staff receive comprehensive training on the safe operation of all machinery and handling of materials, and we conduct regular risk assessments to mitigate any workplace risks.              
+              </p>
+          </div>
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <img src="assets/images/equipment.jpg"
+        </div>
+
+
+    </div>
+  </div>
+
+  
+  </div>
+  </div>
+</div>
+</div>
+</div>
+  
+  
+  <!-- The Modal -->
+<div id="aimsModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Following production and quality control, Touch Talk devices are carefully packaged with protective materials to ensure they arrive in satisfactory condition. We use reliable courier services for distribution, offering both standard and express options to meet various customer needs. Customers receive a tracking number immediately upon dispatch, which typically occurs within 24 hours of order finalisation. We ensure that our packaging materials are environmentally friendly and our logistics processes are optimised for efficiency, reducing the carbon footprint of our deliveries.
+      <br><br>
+      Using centralised storage for inventory, we will ensure that we have sufficient stock to meet demand, while also being able to monitor and control our inventory levels effectively. Our central location in Edinburgh will serve as the hub for our distribution.      
+      </p>
+  </div>
+
+</div>
+
+
+
+  
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">Tesseract</a>. All rights reserved.
+          &nbsp;&nbsp;
+          Entrepreneurship and Innovation Project Group 11</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/modal.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

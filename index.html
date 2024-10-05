@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Tesseract</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+
+    <style>
+    #aimsModal {
+      /* Other styles for your modal */
+      z-index: 1000; /* Example value; should be higher than the z-index of other elements it should cover */
+    }
+    /* For viewports less than 1400px wide */
+@media only screen and (max-width: 1399px) {
+  .categories-collections h4 {
+    font-size: 16px !important; /* Adjust font-size as needed */
+  }
+}
+
+/* For viewports less than 1200px wide */
+@media only screen and (max-width: 1199px) {
+  .categories-collections h4 {
+    font-size: 12px !important; /* Adjust font-size as needed */
+  }
+}
+
+/* For viewports less than 992px wide */
+@media only screen and (max-width: 991px) {
+  .categories-collections h4 {
+    font-size: 14px !important; /* Adjust font-size as needed */
+  }
+}
+
+/* For viewports less than 768px wide */
+@media only screen and (max-width: 767px) {
+  .categories-collections h4 {
+    font-size: 13px !important; /* Adjust font-size as needed */
+  }
+}
+
+/* For viewports less than 576px wide */
+@media only screen and (max-width: 575px) {
+  .categories-collections h4 {
+    font-size: 12px !important; /* Adjust font-size as needed */
+  }
+}
+
+    
+    @media only screen and (max-width: 1200px) {
+      .author img {
+        max-width: 60px; /* Adjust the max-width as needed */
+        height: auto; /* Maintain the aspect ratio */
+        border-radius: 50%; /* Maintain the round shape */
+      }
+    
+      .blog-post-item .left-image,
+      .blog-post-item .right-content {
+        /* Adjust the width or padding to give more space to the author image if needed */
+        width: calc(100% - 20px); /* Example: full width minus some padding */
+        padding: 10px; /* This padding is part of the calc above */
+      }
+    
+      /* Adjust the layout of the blog post items for more space if needed */
+      .blog-post-item .item {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align the items */
+      }
+    
+      /* Make sure the text doesn't wrap too tightly around the image */
+      .blog-post-item .right-content h5,
+      .blog-post-item .right-content .author,
+      .blog-post-item .right-content .tile,
+      .blog-post-item .right-content .text-button {
+        margin-left: 10px; /* Example: add some margin to the left */
+        margin-right: 10px; /* Example: add some margin to the right */
+      }
+    }
+    
+    @media only screen and (max-width: 768px) { /* Adjust for tablets */
+      .author img {
+        max-width: 40px; /* Smaller size for the image */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      .blog-post-item .item {
+        flex-wrap: wrap; /* Stack elements vertically on smaller screens */
+      }
+    
+      .blog-post-item .left-image,
+      .blog-post-item .right-content {
+        width: 100%; /* Full width for small screens */
+        text-align: center; /* Center content if desired */
+      }
+    
+      .blog-post-item .left-image {
+        margin-bottom: 20px; /* Add some space between the image and the content */
+      }
+    }
+    
+    @media only screen and (max-width: 480px) { /* Adjust for mobile phones */
+      .author img {
+        max-width: 35px; /* Even smaller size for the image */
+        height: auto;
+      }
+    
+      .blog-post-item .item {
+        flex-direction: column;
+      }
+    }
+    
+    </style>
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="touchtalk.html">TouchTalk</a></li>
+                        <li><a href="meet-the-team.html">Meet The Team</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h2>Empowering Voices with TouchTalk.</h2>
+            <p style="font-size: 20px">At Tesseract, we are dedicated to revolutionising communication for non-speaking children and young individuals with special needs through our innovative device, TouchTalk.</p>
+            <div class="buttons">
+              <div class="border-button">
+                <a href="touchtalk.html">Explore TouchTalk</a>
+              </div>
+              <div class="main-button">
+                <a href="" id="aimsBtn" target="_blank">Watch The Trailer</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 offset-lg-1">
+          <div class="owl-banner owl-carousel">
+            <div class="item">
+              <img src="assets/images/banner-04.png" alt="">
+            </div>
+            <div class="item">
+              <img src="assets/images/banner-02.png" alt="">
+            </div>
+            <div class="item">
+              <img src="assets/images/banner-03.png" alt="">
+            </div>
+            <div class="item">
+              <img src="assets/images/banner-01.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Main Banner Area End ***** -->
+  
+  <div class="categories-collections">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="categories">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <div class="line-dec"></div>
+                  <h2>Browse Through Our <em>Business Plan</em> Here.</h2>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/executive-summary-icon.png" alt="">
+                  </div>
+                  <h4>Executive Summary</h4>
+                  <div class="icon-button">
+                    <a href="executive-summary.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/information-icon.png" alt="">
+                  </div>
+                  <h4>Background Information</h4>
+                  <div class="icon-button">
+                    <a href="background-information.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/development-icon.png" alt="">
+                  </div>
+                  <h4>Business Development</h4>
+                  <div class="icon-button">
+                    <a href="business-development.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/operations-icon.png" alt="">
+                  </div>
+                  <h4>Operations Management</h4>
+                  <div class="icon-button">
+                    <a href="operations.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/markets-icon.png" alt="">
+                  </div>
+                  <h4>Markets and Competition</h4>
+                  <div class="icon-button">
+                    <a href="markets-and-competition.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                <div class="item">
+                  <div class="icon">
+                    <img src="assets/images/projections-icon.png" alt="">
+                  </div>
+                  <h4>Financial Projections</h4>
+                  <div class="icon-button">
+                    <a href="financial-projections.html"><i class="fa fa-angle-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="collections">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <div class="line-dec"></div>
+                  <h2>Explore <em>TouchTalk</em> Finishes.</h2>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="owl-collection owl-carousel">
+                  <div class="item">
+                    <img src="assets/images/colour-02.png" alt="">
+                    <div class="down-content">
+                      <h4>Tangerine</h4>
+                      <span class="collection">Available:<br><strong>01/12/24</strong></span>
+                      <span class="category">Price:<br><strong>£139</strong></span>
+                      <div class="main-button">
+                        <a href="touchtalk.html">Explore</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="assets/images/colour-01.png" alt="">
+                    <div class="down-content">
+                      <h4>Persian Green Space Cadet</h4>
+                      <span class="collection">Available:<br><strong>08/12/24</strong></span>
+                      <span class="category">Price:<br><strong>£139</strong></span>
+                      <div class="main-button">
+                        <a href="touchtalk.html">Explore</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="assets/images/colour-03.png" alt="">
+                    <div class="down-content">
+                      <h4>Pink</h4>
+                      <span class="collection">Available:<br><strong>15/12/24</strong></span>
+                      <span class="category">Price:<br><strong>£139</strong></span>
+                      <div class="main-button">
+                        <a href="touchtalk.html">Explore</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img src="assets/images/colour-04.png" alt="">
+                    <div class="down-content">
+                      <h4>To be announced...</h4>
+                      <span class="collection">Available:<br><strong>01/12/24</strong></span>
+                      <span class="category">Price:<br><strong>£139</strong></span>
+                      <div class="main-button">
+                        <a href="touchtalk.html">Explore</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="three-item">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+            <h2>Setting up your Tesseract TouchTalk is easy.</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="main-button">
+            <a href="create.html">Download Application</a>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item first-item">
+            <div class="number">
+            </div>
+            <div class="icon">
+              <img src="assets/images/download-icon.png" alt="">
+            </div>
+            <h4>Download Our Mobile Application</h4>
+            <p>Install the TouchTalk app to unlock a world of holographic communication tiles at your fingertips.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item second-item">
+            <div class="number">
+            </div>
+            <div class="icon">
+              <img src="assets/images/mobile-icon.png" alt="">
+            </div>
+            <h4>Set Up Your Predefined Options</h4>
+            <p>Customise TouchTalk with tailored communication tiles to fit your child’s unique needs and preferences seamlessly.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="item">
+            <div class="icon">
+              <img src="assets/images/grid-icon.png" alt="">
+            </div>
+            <h4>Project Your Child's Options</h4>
+            <p>Bring your child’s voice to life by projecting their personalised communication tiles onto any surface.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="blog-post">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <div class="line-dec"></div>
+            <h2><em>Blog</em> Posts.</h2>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="filters">
+            <ul>
+              <li data-filter="*"  class="active">All Stories</li>
+              <li data-filter=".msc">Company News</li>
+              <li data-filter=".dig">TouchTalk</li>
+              <li data-filter=".blc">Societal Issues</li>
+              <li data-filter=".vtr">Activism</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="row grid">
+            <div class="col-lg-6 blog-post-item all msc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/tesseracts-identity-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Tesseract's Visual Identity</h4>
+                  <span class="author">
+                    <img src="assets/images/terry-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Terry Huang<br><a href="terry.html">@s2144299</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    23/03/24<br><em>Tesseract's journey with TouchTalk isn't just about innovation...</em>
+                  </span>
+                  <div class="text-button">
+                    <a href="tesseracts-visual-identity.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 blog-post-item all dig">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/llm-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>The Role of Large Language Model (LLM) Technology</h4>
+                  <span class="author">
+                    <img src="assets/images/krithikha-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Krithikha Sivaraj<br><a href="krithikha.html">@s2202905</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    06/03/24<br><em>In today's rapidly evolving market, the integration of...</em>
+                  </span>
+                  <div class="text-button">
+                    <a href="the-role-of-llm.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 blog-post-item all blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/write-once-use-everywhere-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>The Growth and Development of "Write-Once, Use Everywhere" Frameworks</h4>
+                  <span class="author">
+                    <img src="assets/images/kyle-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Kyle Scorgie<br><a href="kyle.html">@s2143948</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    26/03/24<br><em>Historically, web development and mobile app development... </em>
+                  </span>
+                  <div class="text-button">
+                    <a href="write-once-use-everywhere.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 blog-post-item all vtr">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/store-front-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>Tesseract's Commitment to Human Development</h4>
+                  <span class="author">
+                    <img src="assets/images/anna-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Anna Forbes<br><a href="anna.html">@s2159596</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    28/03/24<br><em>At Tesseract, we’re passionate about our target users and...</em>
+                  </span>
+                  <div class="text-button">
+                    <a href="human-dev-index.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 blog-post-item all vrt dig">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/trailer-set-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h4>A Cinematic Saga Of The Final Weekend</h4>
+                  <span class="author">
+                    <img src="assets/images/terry-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Terry Huang<br><a href="terry.html">@s2144299</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    01/04/24<br><em>As the imposing clock in High School Yard struck 1 pm...</em>
+                  </span>
+                  <div class="text-button">
+                    <a href="the-last-weekend.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 blog-post-item all msc blc">
+              <div class="item">
+                <div class="left-image">
+                  <img src="assets/images/spy-thumbnail.jpg" alt="" style="border-radius: 20px; min-width: 195px;">
+                </div>
+                <div class="right-content">
+                  <h5>Keeping The Website Under Wraps</h4>
+                  <span class="author">
+                    <img src="assets/images/terry-headshot.png" alt="" style="max-width: 50px; border-radius: 50%;">
+                    <h6>Terry Huang<br><a href="terry.html">@s2144299</a></h6>
+                  </span>
+                  <div class="line-dec"></div>
+                  <span class="tile">
+                    26/03/24<br><em>At Tesseract, we've crafted an online experience...</em>
+                  </span>
+                  <div class="text-button">
+                    <a href="website-secret.html">Read Story</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- The Modal -->
+<div id="aimsModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/566SZe5wfAY?si=h04dlGP1zPVrbDoT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p style="font-size: 18px; font-weight: bold;">Credits</p>
+    <div class="line-dec-mini"></div>
+    <p><strong>Featuring:</strong><br>
+    Krithikha Sivaraj (<a href="krithikha.html">@s2202905</a>)<br>
+    Terry Huang (<a href="terry.html">@s2144299</a>)<br>
+    Kyle Scorgie (<a href="kyle.html">@s2143948</a>)<br>
+    Anna Forbes (<a href="anna.html">@s2159596</a>)<br></p>
+    <br>
+    <p><strong>Director, Editor, CAD Renderings, and Thumbnail Design:</strong><br>
+     Terry Huang (<a href="terry.html">@s2144299</a>)</p>
+    <br>
+    <p><strong>Set Contributions:</strong><br>
+      Filmed in "Lower Ground Floor Group Study Room 1" at the <a href="https://www.ed.ac.uk/information-services/library-museum-gallery/using-library/lib-locate/main-lib">University of Edinburgh Main Library</a>. The setting and ambiance was brought to life through personal belongings graciously provided by Terry Huang (<a href="terry.html">@s2144299</a>), Krithikha Sivaraj (<a href="krithikha.html">@s2202905</a>), Kyle Scorgie (<a href="kyle.html">@s2143948</a>) and the <a href="https://www.ed.ac.uk/information-services/library-museum-gallery/using-library/lib-locate/main-lib">University of Edinburgh Main Library</a>. The TouchTalk product model was brought to physical form by the <a href="https://uoe.sharepoint.com/sites/InformaticsMakerspace/SitePages/EIP.aspx?source=https%3A%2F%2Fuoe.sharepoint.com%2Fsites%2FInformaticsMakerspace%2FSitePages%2FForms%2FByAuthor.aspx" target="_blank">University of Edinburgh School of Informatics Makerspace</a>.</p>
+    <br>
+    <p><strong>Lighting Design:</strong><br>
+    Anna Forbes (<a href="anna.html">@s2159596</a>), whose expertise in lighting set the tone and mood, adding depth and dimension to our visual storytelling.</p>
+    <br>
+    <p><strong>Drone Footage Courtesy:</strong><br>
+    Drones Scot - Explore breathtaking aerial views that add a unique perspective to our narrative. Available at <a href="https://youtu.be/xCC6CkhRnw8?si=_VQK4waDYm1EE-i-" target="_blank">Drones Scot on YouTube</a>.</p>
+    <br>
+    <p><strong>Music:</strong><br>
+      "First Sunrise of Spring" by DotSlash. Listen to the inspiring soundtrack that elevates our narrative at <a href="https://youtu.be/qcoz1hyxZY0?si=uhk9WEFnqtrhCu2E" target="_blank">DotSlash on YouTube</a>.</p>
+    <br>
+    <p>We extend our deepest gratitude to everyone involved in the making of this trailer.</p>
+  </div>
+
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">Tesseract</a>. All rights reserved.
+          &nbsp;&nbsp;
+          Entrepreneurship and Innovation Project Group 11</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/modal.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>

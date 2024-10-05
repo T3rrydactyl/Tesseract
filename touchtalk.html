@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>Tesseract | TouchTalk</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/main-styles.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <style>
+      /* Add styles to your main-styles.css file */
+
+      .parallax {
+  /* Your existing styles for the parallax effect */
+  background-image: url('assets/images/touchtalk-page-top-background.svg');
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center align the text for smaller screens or additional text elements */
+}
+
+.centred {
+  max-width: 70%; /* or whatever max-width you prefer */
+  margin: auto; /* Center the div in the available horizontal space */
+}
+
+.centred h5 {
+  font-size: 20px;
+  color: #2E3048;
+  font-weight: 500;
+}
+
+.centred h1 {
+  font-size: 150px;
+  font-family: 'Avenir Next Condensed', 'Abadi MT Condensed Light', sans-serif;
+  font-style: italic;
+  color: #2E3048;
+  margin: 0; /* Reset default margins */
+}
+
+.centred img {
+  max-width: 100%; /* Ensures the image is never larger than its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Removes the inline nature of images to allow for centering with margin: auto */
+}
+
+.bottom-text {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff; /* or any color you wish */
+  width: 100%; /* Ensures the text container spans the full width of the parallax container */
+}
+
+@media (max-width: 1024px) {
+  .parallax .centred h1 {
+    font-size: 80px !important; /* Adjust the font size and ensure it's applied */
+  }
+  
+  /* You can also adjust other elements within the .parallax as needed */
+}
+
+/* For tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+  .parallax .centred h1 {
+    font-size: 100px !important; /* Smaller font size for the main heading */
+  }
+  
+  .parallax .centred h5 {
+    font-size: 16px; /* Smaller font size for the subheadings */
+  }
+
+  .parallax .centred img {
+    margin-top: 5%; /* Adjust image top margin */
+    max-width: 90%; /* Adjust image width if necessary */
+  }
+
+  .parallax .centred .line-dec {
+    width: 100px; /* Adjust width for smaller screens */
+    margin-left: calc(50% - 50px); /* Center based on the new width */
+  }
+
+  .parallax .bottom-text h5 {
+    font-size: 16px; /* Adjust font size for bottom text */
+  }
+}
+
+/* For mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .parallax .centred {
+    max-width: 90%; /* Allow more margin on the sides */
+  }
+
+  .parallax .centred h1 {
+    font-size: 60px !important; /* Further reduce font size for the main heading */
+  }
+  
+  .parallax .centred h5 {
+    font-size: 14px; /* Further reduce font size for the subheadings */
+  }
+
+  .parallax .centred img {
+    margin-top: 3%; /* Further adjust image top margin */
+    max-width: 100%; /* Make image full width */
+  }
+
+  .parallax .centred .line-dec {
+    width: 80px; /* Further reduce width for very small screens */
+    margin-left: calc(50% - 40px); /* Center based on the new width */
+    margin-top: -10px; /* Adjust top margin if necessary */
+    margin-bottom: 20px; /* Adjust bottom margin if necessary */
+  }
+
+  .parallax .bottom-text {
+    bottom: 10px; /* Adjust bottom position for smaller screens */
+    font-size: 14px; /* Adjust font size for bottom text */
+  }
+}
+
+/* For large screens (min-width: 1400px) */
+@media (min-width: 1400px) {
+  .parallax {
+    padding-top: 100px !important; /* Add padding to the top of the parallax section */
+  }
+
+  .parallax .centred .line-dec {
+    width: 200px; /* Increase width for larger screens */
+    margin-left: calc(50% - 100px); /* Center based on the new width */
+    margin-top: -30px; /* Adjust top margin if necessary for larger screens */
+  }
+
+  .parallax .bottom-text h5 {
+    font-size: 20px; /* Adjust font size for bottom text on large screens */
+  }
+}
+
+.color-picker {
+  display: flex;
+  justify-content: center; /* Centers the color picker buttons in a row */
+  gap: 10px; /* Adds space between the buttons */
+  margin: 20px 0; /* Adds space above and below the color picker */
+}
+
+.color-picker .color-option {
+  width: 30px; /* Width of the color picker circles */
+  height: 30px; /* Height of the color picker circles */
+  border-radius: 50%; /* Makes the buttons circular */
+  border: none; /* Removes border */
+  cursor: pointer; /* Indicates the buttons are clickable */
+  border: 2px solid #FDF8F5;
+}
+
+.color-description {
+  /* Style for your color description text if needed */
+  text-align: center;
+}
+
+.color-option:nth-child(1) { background-image: linear-gradient(to bottom, #9400F4, #E46DE1); }
+.color-option:nth-child(2) { background-image: linear-gradient(to bottom, #59E9E6, #2278AF); }
+.color-option:nth-child(3) { background-image: linear-gradient(to bottom, #FEFF1C, #BA5109); }
+
+.color-option.selected {
+  border-color: grey; /* The grey ring */
+}
+
+.section h2, .discover-items h2 {
+  font-size: 50px;
+  line-height: 50px;
+}
+
+.row {
+  margin-bottom: 100px;
+}
+
+.section .line-dec {
+  height: 5px;
+  margin-top: 20px;
+}
+
+.section p, .discover-items p {
+  font-size: 35px;
+  line-height: 35px;
+}
+
+.section li {
+  font-size: 20px;
+  line-height: 20px;
+  padding: 0px !important;
+}
+
+.custom-bullet-list {
+  list-style-type: none; /* Remove default list styling */
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.custom-bullet-list li {
+  position: relative;
+  padding-left: 40px; /* Space for the bullet image */
+  line-height: 1.5; /* Adjust the line height as needed */
+  margin-bottom: 10px; /* Space between list items */
+  margin-left: 15px;
+}
+
+.custom-bullet-list li:before {
+  content: '' !important;
+  position: absolute;
+  left: 0; /* Align with the text's left edge */
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Precise vertical centering */
+  height: 1em; /* Set the height relative to the font-size */
+  width: 1em; /* Keep width and height equal */
+  background-size: contain; /* Make sure the image covers the area without distorting */
+  background-repeat: no-repeat;
+}
+
+.bullet-item-1:before {
+  background-image: url('assets/images/contrast-icon.png');
+}
+
+.bullet-item-2:before {
+  background-image: url('assets/images/size-icon.png');
+}
+
+.bullet-item-3:before {
+  background-image: url('assets/images/brightness-icon.png');
+}
+
+body {
+  background-color: #FDF8F5;
+}
+
+
+* {box-sizing: border-box}
+
+.mySlides {
+  display: none;
+  text-align: center; /* Center slideshow images */
+}
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  max-width: 80%; /* Adjust to desired width */
+}
+
+.mySlides img {
+  max-width: 100%; /* Make sure images are responsive */
+  border-radius: 20px; /* Round off corners */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+    </style>
+    
+  </head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="touchtalk.html" class="active">TouchTalk</a></li>
+                        <li><a href="meet-the-team.html">Meet The Team</a></li>
+                    </ul>   
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="parallax">
+    <div class="centred">
+      <h1 style="font-size: 150px; font-style: italic; font-weight: 550; color: #2E3048">TOUCHTALK</h1>
+      <div class="line-dec"></div>
+      <h5>From £139</h5>
+      <h5 style="color: #B3ADB3">Available starting 1 December.</h5>
+      <img style="margin-top: 7%;" src="assets/images/touchtalk-page-top-products.png">
+
+      <div class="bottom-text">
+        <h5 style="color: #B3ADB3; font-weight: bold;">Scroll down to explore TouchTalk</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Your content goes here -->
+  <div class="section"  style="padding: 30px 0px 0px 0px">
+    <div class="container">
+      <div class="row">
+      <div class="section-heading-left">
+        <h2>Explore Your <em>Colour</em> Options.</h2>
+        <div class="line-dec"></div>
+      </div>
+
+      <div class="image-container">
+        <img id="product-image" src="assets/images/persian-green-space-cadet-transparent.png" alt="Product Image"/>
+      </div>
+
+      <div class="color-description">
+        <p style="color: gray; font-size: 16px;" id="color-description-text">Persian Green Space Cadet</p>
+      </div>
+
+      <div class="color-picker">
+        <button class="color-option" 
+          data-image="assets/images/pink-transparent.png" 
+          data-gesture-image="assets/images/pink-gesture-driven.png"
+          customisable-comms-image="assets/images/pink-customisable-comms.png"
+          sales-opts-image="assets/images/pink-sales-opts.png"
+          multisensory-image-whole="assets/images/pink-multisensory-whole.png"
+          multisensory-image-explode="assets/images/pink-multisensory-exploded.jpg"
+          multisensory-image-corner="assets/images/pink-multisensory-corner.jpg"
+          multisensory-image-front="assets/images/pink-multisensory-front.png"
+          image-explode="assets/images/pink-exploded.jpg"
+          data-color-name="Pink">
+        </button>
+        <button class="color-option selected" 
+        data-image="assets/images/persian-green-space-cadet-transparent.png" 
+        data-gesture-image="assets/images/persian-green-space-cadet-gesture-driven.png" 
+        customisable-comms-image="assets/images/persian-green-space-cadet-customisable-comms.png"
+        sales-opts-image="assets/images/persian-green-space-cadet-sales-opts.png"
+        multisensory-image-whole="assets/images/persian-green-space-cadet-multisensory-whole.png"
+        multisensory-image-explode="assets/images/persian-green-space-cadet-multisensory-exploded.jpg"
+        multisensory-image-corner="assets/images/persian-green-space-cadet-multisensory-corner.jpg"
+        multisensory-image-front="assets/images/persian-green-space-cadet-multisensory-front.png"
+        image-explode="assets/images/persian-green-space-cadet-exploded.jpg"
+        data-color-name="Persian Green Space Cadet">
+      </button>
+      <button class="color-option" 
+        data-image="assets/images/tangerine-transparent.png" 
+        data-gesture-image="assets/images/tangerine-gesture-driven.png" 
+        customisable-comms-image="assets/images/tangerine-customisable-comms.png"
+        sales-opts-image="assets/images/tangerine-sales-opts.png"
+        multisensory-image-whole="assets/images/tangerine-multisensory-whole.png"
+        multisensory-image-explode="assets/images/tangerine-multisensory-exploded.jpg"
+        multisensory-image-corner="assets/images/tangerine-multisensory-corner.jpg"
+        multisensory-image-front="assets/images/tangerine-multisensory-front.png"
+        image-explode="assets/images/tangerine-exploded.jpg"
+        data-color-name="Tangerine">
+      </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading-left">
+          <h2>Gesture-Driven <em>Holographic</em> Interactions</h2>
+          <div class="line-dec"></div>
+        </div>
+        <p>Utilises cutting-edge
+          holographic technology
+          to project communication
+          tiles onto surfaces,
+          enabling seamless
+          and interactive 
+          communication through
+          gestures.</p><br>
+          <ul class="custom-bullet-list">
+            <li class="bullet-item-1">1000:1 Contrast Ratio</li>
+            <li class="bullet-item-2">30-60" Projections</li>
+            <li class="bullet-item-3">1000 Lumens</li>
+            <!-- ... more list items with unique classes ... -->
+          </ul>
+      </div>
+      <div class="col-lg-6">
+        <img id="gesture-driven-image" src="assets/images/persian-green-space-cadet-gesture-driven.png">
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-6">
+        <img id="customisable-comms-image" src="assets/images/persian-green-space-cadet-customisable-comms.png">
+      </div>
+      <div class="col-lg-6">
+        <div class="section-heading-left">
+          <h2>Fully <em>Customisable</em> Communication</h2>
+          <div class="line-dec"></div>
+        </div>
+        <p>TouchTalk’s intuitive mobile 
+          app allows users to easily 
+          select and customise 
+          communication tiles for 
+          projection.
+          
+          The app comes with a diverse 
+          selection of tiles, including food 
+          items, activities, and more.</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-heading-left">
+          <h2>Direct and Online <em>Sales</em> Options.</h2>
+          <div class="line-dec"></div>
+        </div>
+        <p>Available for purchase through 
+          direct sales at events and online, 
+          providing flexible buying options 
+          for institutions and individual 
+          consumers.</p><br>
+
+          <p>Engineered to be a cost-effective 
+            solution for Special Educational 
+            Needs and Disabilities (SEND) 
+            funding, ensuring accessibility for 
+            educational institutions and families.</p>
+      </div>
+      <div class="col-lg-6">
+        <img id="sales-opts-image" src="assets/images/persian-green-space-cadet-sales-opts.png">
+      </div>
+    </div>
+    </div>
+
+    
+  </div>
+
+  <div class="featured-explore">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel">
+            <img src="assets/images/gallery-2.jpg">
+            <img src="assets/images/polaroids.jpg">
+            <img src="assets/images/old-camera.jpg">
+            <img src="assets/images/kyle-in-cinema.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="discover-items" style="padding: 400px 0px 0px 0px">
+    <div class="container">
+    <div class="row">
+      <div class="section-heading-left">
+        <h2>Enhancing Communications Through <em>Multisensory Engagement</em>.</h2>
+        <div class="line-dec"></div>
+      </div>
+      <div class="col-lg-6">
+        <p>Sold separately is a durable, 
+          3D-printed rubber casing designed 
+          to withstand the demands of 
+          educational and therapeutic 
+          settings.
+          <br><br>
+          This modular casing, has slots
+          to accommodate interchangeable 
+          panels with distinct textures 
+          to provide a customisable sensory 
+          experience tailored to individual 
+          preferences.</p>
+      </div>
+      <div class="col-lg-6">
+        <img id="multisensory-image-whole" src="assets/images/persian-green-space-cadet-multisensory-whole.png">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <img id="multisensory-image-explode" style="border-radius: 20px;" src="assets/images/persian-green-space-cadet-multisensory-exploded.jpg">
+      </div>
+
+      <div class="col-lg-6">
+        <img id="multisensory-image-corner" style="border-radius: 20px;" src="assets/images/persian-green-space-cadet-multisensory-corner.jpg">
+      </div>
+    </div>
+
+    <div class="row">
+      <img id="multisensory-image-front" style="border-radius: 20px;" src="assets/images/persian-green-space-cadet-multisensory-front.png">
+    </div>
+  </div>
+</div>
+
+<div class="section" style="padding: 0px;">
+  <div class="container">
+    <div class="row">
+    <div class="col-lg-6">
+      <div class="section-heading-left">
+        <h2>The <em>Engineering</em> Marvel Of TouchTalk.</h2>
+        <div class="line-dec"></div>
+      </div>
+      <p>TouchTalk represents engineering 
+        excellence, blending holographic 
+        technology with interactive design
+        to transform communication for 
+        non-verbal individuals.</p>
+    </div>
+
+    <div class="col-lg-6">
+      <img id="image-explode" style="border-radius: 20px;" src="assets/images/persian-green-space-cadet-exploded.jpg">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="section-heading">
+      <h2>Interactive Tool: <em>Tearing Down</em> TouchTalk.</h2>
+      <div class="line-dec"></div>
+    </div>
+    <p> Use the arrows to tear down TouchTalk,  piece by piece.</p>
+
+    <!-- Slideshow container -->
+
+    <div class="slideshow-container">
+
+      <!-- Slides -->
+      <div class="mySlides">
+        <img src="assets/images/image1-interactive.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/image2-interactive.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/image3-interactive.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <img src="assets/images/image4-interactive.jpg" style="width:100%">
+      </div>
+    
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+    </div>
+    </div>
+
+  </div>
+</div>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">Tesseract</a>. All rights reserved.
+          &nbsp;&nbsp;
+          Entrepreneurship and Innovation Project Group 11</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var colorOptions = document.querySelectorAll('.color-option');
+  var productImage = document.getElementById('product-image');
+  var gestureDrivenImage = document.getElementById('gesture-driven-image');
+  var customisableCommsImage = document.getElementById('customisable-comms-image');
+  var salesOptsImage = document.getElementById('sales-opts-image');
+  var multisensoryWholeImage = document.getElementById('multisensory-image-whole');
+  var multisensoryExplodeImage = document.getElementById('multisensory-image-explode')
+  var multisensoryCornerImage = document.getElementById('multisensory-image-corner')
+  var multisensoryFrontImage = document.getElementById('multisensory-image-front')
+  var explodeImage = document.getElementById('image-explode')
+  var colorDescriptionText = document.getElementById('color-description-text');
+
+  // Set the default image and color description
+  var defaultSelection = document.querySelector('.color-option.selected');
+  productImage.src = defaultSelection.getAttribute('data-image');
+  gestureDrivenImage.src = defaultSelection.getAttribute('data-gesture-image');
+  customisableCommsImage.src = defaultSelection.getAttribute('customisable-comms-image');
+  salesOptsImage.src = defaultSelection.getAttribute('sales-opts-image');
+  multisensoryWholeImage.src = defaultSelection.getAttribute('multisensory-image-whole')
+  multisensoryExplodeImage.src = defaultSelection.getAttribute('multisensory-image-explode')
+  multisensoryCornerImage.src = defaultSelection.getAttribute('multisensory-image-corner')
+  multisensoryFrontImage.src = defaultSelection.getAttribute('multisensory-image-front')
+  explodeImage.src = defaultSelection.getAttribute('image-explode')
+  colorDescriptionText.textContent = defaultSelection.getAttribute('data-color-name');
+
+  colorOptions.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Change both the product image and the gesture-driven image
+      productImage.src = this.getAttribute('data-image');
+      gestureDrivenImage.src = this.getAttribute('data-gesture-image');
+      customisableCommsImage.src = this.getAttribute('customisable-comms-image');
+      salesOptsImage.src = this.getAttribute('sales-opts-image')
+      multisensoryWholeImage.src = this.getAttribute('multisensory-image-whole')
+      multisensoryExplodeImage.src = this.getAttribute('multisensory-image-explode')
+      multisensoryCornerImage.src = this.getAttribute('multisensory-image-corner')
+      multisensoryFrontImage.src = this.getAttribute('multisensory-image-front')
+      explodeImage.src = this.getAttribute('image-explode')
+      // Change the color description text
+      colorDescriptionText.textContent = this.getAttribute('data-color-name');
+      
+      // Remove 'selected' class from all buttons
+      colorOptions.forEach(function(btn) { btn.classList.remove('selected'); });
+      // Add 'selected' class to the clicked button
+      this.classList.add('selected');
+    });
+  });
+});
+
+  </script>
+
+<script> 
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+
+  </script>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+
+  <script src="assets/js/tabs.js"></script>
+  <script src="assets/js/popup.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  </body>
+</html>
