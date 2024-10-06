@@ -3,7 +3,7 @@
 ## Description
 This project was developed as part of the [**Entrepreneurship and Innovation Project (2023-2024)[SEM2]**](http://www.drps.ed.ac.uk/23-24/dpt/cxinfr09053.htm) course at the **University of Edinburgh**. Our team was tasked with creating a 'holographic device' that supports the **Human Development Index (HDI)**. We developed **TouchTalk**, a mid-tech Augmentative and Alternative Communication (AAC) device designed to improve communication for non-verbal children through gesture-driven holographic interactions.
 
-A live preview of the website can be found [here](https://t3rrydactyl.github.io/Tesseract/index.html).
+A live preview of the website can be found [here](https://t3rryhuang.github.io/Tesseract/index.html).
 
 ## Features
 - **Gesture-Driven Holographic Interactions**  
