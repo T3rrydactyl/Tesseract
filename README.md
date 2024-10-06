@@ -29,16 +29,16 @@ Click the image to watch the trailer for TouchTalk.
 
 ## Team
 - **Krithikha Sivaraj**  
-  Market Research - [View Profile](https://t3rrydactyl.github.io/Tesseract/krithikha.html)
+  Market Research - [View Profile](https://t3rryhuang.github.io/Tesseract/krithikha.html)
   
 - **Terry Huang**  
-  Website Development - [View Profile](https://t3rrydactyl.github.io/Tesseract/terry.html)
+  Website Development - [View Profile](https://t3rryhuang.github.io/Tesseract/terry.html)
   
 - **Kyle Scorgie**  
-  Mobile App Development - [View Profile](https://t3rrydactyl.github.io/Tesseract/kyle.html)
+  Mobile App Development - [View Profile](https://t3rryhuang.github.io/Tesseract/kyle.html)
   
 - **Anna Forbes**  
-  Hardware Development - [View Profile](https://t3rrydactyl.github.io/Tesseract/anna.html)
+  Hardware Development - [View Profile](https://t3rryhuang.github.io/Tesseract/anna.html)
 
 ## Acknowledgments
 Special thanks to my teammates for their hard work and contributions.
